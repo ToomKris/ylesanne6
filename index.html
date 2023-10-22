@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktiivne veebileht</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section id="section1">
+            <h3>1. osa: Kell</h3>
+            <div id="clock"></div>
+        </section>
+        <hr>
+        <section id="section2">
+            <h3>2. osa: Vormid</h3>
+            <form id="form">
+                <!-- Input fields -->
+                <div id="input-fields">
+                    <div id="first-name">
+                        <label for="fname">Eesnimi:</label>
+                        <input type="text" id="fname" name="fname">
+                    </div>
+                    <div id="last-name">
+                        <label for="lname">Perekonnanimi:</label>
+                        <input type="text" id="lname" name="lname">
+                    </div>
+                </div>
+                <!-- Checkbox -->
+                <div id="form-checkbox">
+                    <div class="box">
+                        <input type="checkbox" id="v1" name="v1" value="present">
+                        <label for="v1">See on kingitus (5€)</label>
+                    </div>
+                    <div class="box">
+                        <input type="checkbox" id="v2" name="v2" value="contactless">
+                        <label for="v2">Soovin kontaktivaba tarnet (1€)</label>
+                    </div>
+                </div>
+                <!-- Radio buttons -->
+                <div id="form-radio">
+                    <label>Valige tarneliik:</label>
+                    <input type="radio" id="express" name="delivery" value="express">
+                    <label for="express">Express tarnega (10€)</label>
+                    <input type="radio" id="standard" name="delivery" value="standard">
+                    <label for="standard">Standard tarnega (5€)</label>
+                </div>
+                <!-- Dropdown -->
+                <div id="dropdown">
+                    <label for="linn">Valige linn: </label>
+                    <select name="linn" id="linn">
+                        <option value="">- Valige linn -</option>
+                        <option value="tln">Tallinn (0€)</option>
+                        <option value="trt">Tartu (2.5€)</option>
+                        <option value="nrv">Narva (2.5€)</option>
+                        <option value="prn">Pärnu (3€)</option>
+                    </select>
+                </div>
+                <div id="calc">
+                    <input type="submit" value="Arvuta tarne hind:" id="btn-delivery">
+                </div>
+                <div id="delivery"></div>
+            </form>
+        </section>
+        <hr>
+        <section id="section3">
+            <h3>3. osa: Kaart</h3>
+            <div id="map"></div>
+        </section>
+    </main>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=YOUR_API_KEY" async defer></script>
+</body>
+</html>
